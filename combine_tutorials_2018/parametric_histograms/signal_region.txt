@@ -1,0 +1,30 @@
+Signal Region Datacard -- signal category
+
+imax * number of bins
+jmax * number of processes minus 1
+kmax * number of nuisance parameters
+
+---------------------------------------------------------------------------------------
+
+shapes data_obs    signal   param_ws.root wspace:data_obs_SR 
+shapes background  signal   param_ws.root wspace:bkg_SR  
+shapes signal      signal   param_ws.root wspace:signal
+
+---------------------------------------------------------------------------------------
+bin         signal
+observation  -1 
+---------------------------------------------------------------------------------------
+# background rate must be taken from _norm param x 1      
+bin                 signal      signal  
+process             background  signal  
+process             1            0      
+rate                1            -1      
+---------------------------------------------------------------------------------------
+# Normal uncertainties in the signal region 
+lumi_8TeV         lnN    -           1.026 
+---------------------------------------------------------------------------------------
+# free floating parameters, we do not need to declare them, but its a good idea to 
+bkg_SR_bin1  flatParam 
+bkg_SR_bin2  flatParam 
+bkg_SR_bin3  flatParam 
+bkg_SR_bin4  flatParam 

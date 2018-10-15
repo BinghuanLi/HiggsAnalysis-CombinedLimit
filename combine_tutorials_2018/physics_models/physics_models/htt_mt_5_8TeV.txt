@@ -1,0 +1,41 @@
+imax    1     number of categories 
+jmax    9     number of samples minus one 
+kmax    *     number of nuisance parameters 
+------------------------------------------------------------------------------- 
+shapes * * htt_mt.input_8TeV.root $CHANNEL/$PROCESS $CHANNEL/$PROCESS_$SYSTEMATIC 
+shapes ggH * htt_mt.input_8TeV.root $CHANNEL/$PROCESS$MASS $CHANNEL/$PROCESS$MASS_$SYSTEMATIC 
+shapes qqH * htt_mt.input_8TeV.root $CHANNEL/$PROCESS$MASS $CHANNEL/$PROCESS$MASS_$SYSTEMATIC 
+shapes VH * htt_mt.input_8TeV.root $CHANNEL/$PROCESS$MASS $CHANNEL/$PROCESS$MASS_$SYSTEMATIC 
+------------------------------------------------------------------------------- 
+bin                                            muTau_vbf     
+observation                                    199           
+------------------------------------------------------------------------------- 
+bin                                            muTau_vbf    muTau_vbf    muTau_vbf    muTau_vbf    muTau_vbf    muTau_vbf    muTau_vbf    muTau_vbf    muTau_vbf    muTau_vbf     
+process                                        -2           -1           0            1            2            3            4            5            6            7             
+process                                        ggH          qqH          VH           ZTT          QCD          W            ZL           ZJ           TT           VV            
+#rate                                           2.36529      7.04351      0.028046     94.286       39.2563      46.6949      0.828452     3.72816      4.29862      1.48636       
+rate                                           -1            -1           -1           -1           -1           -1           -1           -1           -1           -1 
+------------------------------------------------------------------------------- 
+lumi_8TeV lnN                                  1.042        1.042        1.042        -            -            -            -            -            -            -             
+pdf_qqbar lnN                                  -            1.03         1.02         -            -            -            -            -            -            -             
+pdf_gg lnN                                     1.08         -            -            -            -            -            -            -            -            -             
+UEPS lnN                                       1.04         1.04         1.04         -            -            -            -            -            -            -             
+QCDscale_ggH2in lnN                             1.3         -            -            -            -            -            -            -            -            -             
+QCDscale_qqH lnN                               -            1.04         -            -            -            -            -            -            -            -             
+QCDscale_VH lnN                                -            -            1.04         -            -            -            -            -            -            -             
+CMS_eff_m lnN                                  1.02         1.02         1.02         1.020        -            -            1.020        1.020        1.020        1.020         
+CMS_eff_t_mutau_8TeV lnN                       1.08         1.08         1.08         1.080        -            -            -            -            1.080        1.080         
+CMS_eff_t_mutau_high_8TeV lnN                  1.015        1.015        1.015        1.015        -            -            -            -            1.015        1.015         
+CMS_scale_t_mutau_8TeV shape                      1            1            1         1.000        -            -            -            -            -            -             
+CMS_scale_j_8TeV lnN                            1.1         1.05         1.15         -            -            -            -            -            1.050        1.100         
+CMS_htt_scale_met_8TeV lnN                     1.05         1.05         1.05         -            -            -            1.050        1.050        1.070        1.070         
+CMS_htt_zttNorm_8TeV lnN                       -            -            -            1.030        -            -            1.030        1.030        -            -             
+CMS_htt_ttbarNorm_8TeV lnN                     -            -            -            -            -            -            -            -            1.080        -             
+CMS_htt_ttbarNorm_mutau_vbf_8TeV lnN           -            -            -            -            -            -            -            -            1.330        -             
+CMS_htt_DiBosonNorm_8TeV lnN                   -            -            -            -            -            -            -            -            -            1.150         
+CMS_htt_DiBosonNorm_mutau_vbf_8TeV lnN         -            -            -            -            -            -            -            -            -            1.280         
+CMS_htt_WNorm_mutau_vbf_8TeV lnN               -            -            -            -            -            1.124        -            -            -            -             
+CMS_htt_extrap_ztt_mutau_vbf_8TeV lnN          -            -            -            1.100        -            -            -            -            -            -             
+CMS_htt_QCDSyst_mutau_vbf_8TeV lnN             -            -            -            -            1.190        -            -            -            -            -             
+CMS_htt_ZLeptonFakeTau_mutau_8TeV lnN          -            -            -            -            -            -            1.300        -            -            -             
+CMS_htt_ZJetFakeTau_mutau_vbf_8TeV lnN         -            -            -            -            -            -            -            1.400        -            -             

@@ -1,0 +1,9 @@
+
+ --- ChannelCompatibilityCheck --- 
+Nominal fit  : r =  0.8344  -0.3771/+0.4076
+Alternate fit: r =  2.1026  -0.7644/+0.9305   in channel cat0
+Alternate fit: r =  0.0519  -0.0511/+0.6898   in channel cat1
+Alternate fit: r =  0.2614  -0.2611/+0.7012   in channel cat4
+Alternate fit: r =  0.9415  -0.9402/+1.1099   in channel cat5
+Chi2-like compatibility variable: 415.939
+Done in 0.04 min (cpu), 0.04 min (real)

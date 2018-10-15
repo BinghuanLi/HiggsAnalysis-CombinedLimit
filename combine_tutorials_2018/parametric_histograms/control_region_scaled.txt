@@ -1,0 +1,26 @@
+Control Region Datacard -- control category
+
+imax * number of bins
+jmax * number of processes minus 1
+kmax * number of nuisance parameters
+
+----------------------------------------------------------------
+
+shapes data_obs    control   param_ws.root wspace:data_obs_CR 
+shapes background  control   param_ws.root wspace:bkg_CR   
+
+----------------------------------------------------------------
+bin         control
+observation  -1 
+----------------------------------------------------------------
+# background rate will be taken from _norm param x 1 
+bin                 control     
+process             background  
+process             1           
+rate                1                   
+----------------------------------------------------------------
+# constrain muon_efficiency
+muon_eff param 0 1
+
+luminosity rateParam * * 1 
+nuisance edit freeze luminosity
