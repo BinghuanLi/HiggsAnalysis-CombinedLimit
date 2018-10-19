@@ -1,11 +1,16 @@
-At r = 0.821312:	q_mu = 3.90645	q_A  = 3.72572	CLsb = 0.02402	CLb  = 0.48133	CLs  = 0.04990
+ <<< Combine >>> 
+ WARNING --  From combine v7, method Asymptotic has been renamed to AsymptoticLimits
+>>> including systematics
+>>> method used is Asymptotic
+>>> random number generator seed is 123456
+Computing results starting from observation (a-posteriori)
 
- -- Asymptotic -- 
+ -- AsymptoticLimits ( CLs ) --
 Observed Limit: r < 0.8213
-Expected  2.5%: r < 0.4339
-Expected 16.0%: r < 0.5847
-Expected 50.0%: r < 0.8320
-Expected 84.0%: r < 1.2134
-Expected 97.5%: r < 1.7123
+Expected  2.5%: r < 0.4343
+Expected 16.0%: r < 0.5849
+Expected 50.0%: r < 0.8359
+Expected 84.0%: r < 1.2125
+Expected 97.5%: r < 1.7110
 
-Done in 0.08 min (cpu), 0.09 min (real)
+Done in 0.24 min (cpu), 0.24 min (real)
