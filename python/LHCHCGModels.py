@@ -607,7 +607,7 @@ class KappaVKappaF(LHCHCGBaseModel):
             if production in [ "ggZH", "tHq", "tHW"]:
                 XSscal = ("@0", "Scaling_%s_%s_%s" % (production,CMS_to_LHCHCG_DecSimple[decay],energy) )
             elif production in ["ggH", "ttH", "bbH"]:  XSscal = ("@0*@0", "kFkF_"+CMS_to_LHCHCG_DecSimple[decay])
-            elif production in ["qqH", "WH", "ZH"]:  XSscal = ("@0*@0", "kVkV_"+CMS_to_LHCHCG_DecSimple[decay])
+            elif production in ["qqH", "WH", "ZH", "VH"]:  XSscal = ("@0*@0", "kVkV_"+CMS_to_LHCHCG_DecSimple[decay])
             else: raise RuntimeError, "Production %s not supported" % production
             BRscal = decay
             if decay == "hss": BRscal = "hbb"
