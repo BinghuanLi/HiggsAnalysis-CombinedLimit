@@ -1,0 +1,77 @@
+void makeRooMultiPdfWorkspaceFTest(){
+
+    // Load the combine Library 
+    gSystem->Load("libHiggsAnalysisCombinedLimit.so");
+
+    // Open the dummy H->gg workspace 
+    TFile *f_hgg = TFile::Open("toyhgg_in.root");
+    RooWorkspace *w_hgg = (RooWorkspace*)f_hgg->Get("multipdf");
+
+    // The observable (CMS_hgg_mass in the workspace)
+    RooRealVar *mass =  w_hgg->var("CMS_hgg_mass");
+    //mass->setRange("LeftSideBand", 110.0, 120.0);
+    //mass->setRange("RightSideBand", 130.0, 150.0);
+
+    // Get the polynomial functions inside of different degrees
+    RooAbsPdf *pdf_pol1 = w_hgg->pdf("env_pdf_1_8TeV_bern1");
+    RooAbsPdf *pdf_pol2 = w_hgg->pdf("env_pdf_1_8TeV_bern2");
+    RooAbsPdf *pdf_pol3 = w_hgg->pdf("env_pdf_1_8TeV_bern3");
+    RooAbsPdf *pdf_pol4 = w_hgg->pdf("env_pdf_1_8TeV_bern4");
+    RooAbsPdf *pdf_pol5 = w_hgg->pdf("env_pdf_1_8TeV_bern5");
+
+
+    // Fit the functions to the data to set the "prefit" state (note this can and should be redone with combine when doing 
+    // bias studies as one typically throws toys from the "best-fit"    
+    RooDataSet *data = (RooDataSet*)w_hgg->data("roohist_data_mass_cat1_toy1_cutrange__CMS_hgg_mass");
+    RooFitResult *r1 = pdf_pol1->fitTo(*data,RooFit::Save(1));   // index 0
+    RooFitResult *r2 = pdf_pol2->fitTo(*data,RooFit::Save(1));   // index 1
+    RooFitResult *r3 = pdf_pol3->fitTo(*data,RooFit::Save(1));   // index 2
+    RooFitResult *r4 =pdf_pol4->fitTo(*data,RooFit::Save(1));   // index 3
+    RooFitResult *r5 = pdf_pol5->fitTo(*data,RooFit::Save(1));   // index 4
+
+    // Make a plot (data is a toy dataset)
+    TCanvas *c1 = new TCanvas("c1","c1",800,800);
+    c1->cd();
+    RooPlot *plot = mass->frame();   data->plotOn(plot,RooFit::Name("data"));
+    pdf_pol1->plotOn(plot,RooFit::LineColor(kRed),RooFit::Name("pol1"));
+    pdf_pol2->plotOn(plot,RooFit::LineColor(kOrange),RooFit::Name("pol2"));
+    pdf_pol3->plotOn(plot,RooFit::LineColor(kGreen),RooFit::Name("pol3"));
+    pdf_pol4->plotOn(plot,RooFit::LineColor(kBlue),RooFit::Name("pol4"));
+    pdf_pol5->plotOn(plot,RooFit::LineColor(kMagenta),RooFit::Name("pol5"));
+    plot->SetTitle("Bernstein Polynomial Fits");
+    plot->Draw();
+    c1->SaveAs("Ftest_fits.pdf");
+
+    std::cout<<"chi2 nbins: "<<mass->getBins()<<std::endl;
+    std::cout<<"chi2 pol1: "<<plot->chiSquare("pol1","data",r1->floatParsFinal().getSize())*(mass->getBins()-r1->floatParsFinal().getSize())<<" (params="<<r1->floatParsFinal().getSize()<<")"<<endl;
+    std::cout<<"chi2 pol2: "<<plot->chiSquare("pol2","data",r2->floatParsFinal().getSize())*(mass->getBins()-r2->floatParsFinal().getSize())<<" (params="<<r2->floatParsFinal().getSize()<<")"<<endl;
+    std::cout<<"chi2 pol3: "<<plot->chiSquare("pol3","data",r3->floatParsFinal().getSize())*(mass->getBins()-r3->floatParsFinal().getSize())<<" (params="<<r3->floatParsFinal().getSize()<<")"<<endl;
+    std::cout<<"chi2 pol4: "<<plot->chiSquare("pol4","data",r4->floatParsFinal().getSize())*(mass->getBins()-r4->floatParsFinal().getSize())<<" (params="<<r4->floatParsFinal().getSize()<<")"<<endl;
+    std::cout<<"chi2 pol5: "<<plot->chiSquare("pol5","data",r5->floatParsFinal().getSize())*(mass->getBins()-r5->floatParsFinal().getSize())<<" (params="<<r5->floatParsFinal().getSize()<<")"<<endl;
+
+    // Make a RooCategory object. This will control which of the pdfs is "active"
+    RooCategory cat("pdf_index","Index of Pdf which is active");
+
+    // Make a RooMultiPdf object. The order of the pdfs will be the order of their index, ie for below 
+    RooArgList mypdfs;
+    mypdfs.add(*pdf_pol1);
+    mypdfs.add(*pdf_pol2);
+    mypdfs.add(*pdf_pol3);
+    mypdfs.add(*pdf_pol4);
+    mypdfs.add(*pdf_pol5);
+   
+    RooMultiPdf multipdf("roomultipdf","All Pdfs",cat,mypdfs);
+   
+    // As usual make an extended term for the background with _norm for freely floating yield
+    RooRealVar norm("roomultipdf_norm","Number of background events",0,10000);
+   
+    // Save to a new workspace
+    TFile *fout = new TFile("background_pdfs_ftest.root","RECREATE");
+    RooWorkspace wout("backgrounds","backgrounds");
+    wout.import(cat);
+    wout.import(norm);
+    wout.import(multipdf);
+    wout.Print();
+    wout.Write();
+
+}

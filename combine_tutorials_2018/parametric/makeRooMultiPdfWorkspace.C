@@ -1,0 +1,68 @@
+void makeRooMultiPdfWorkspace(){
+
+    // Load the combine Library 
+    gSystem->Load("libHiggsAnalysisCombinedLimit.so");
+
+    // Open the dummy H->gg workspace 
+    TFile *f_hgg = TFile::Open("toyhgg_in.root");
+    RooWorkspace *w_hgg = (RooWorkspace*)f_hgg->Get("multipdf");
+
+    // The observable (CMS_hgg_mass in the workspace)
+    RooRealVar *mass =  w_hgg->var("CMS_hgg_mass");
+
+    // Get three of the functions inside, exponential, linear polynomial, power law
+    RooAbsPdf *pdf_exp = w_hgg->pdf("env_pdf_1_8TeV_exp1");
+    RooAbsPdf *pdf_pol = w_hgg->pdf("env_pdf_1_8TeV_bern2");
+    RooAbsPdf *pdf_pow = w_hgg->pdf("env_pdf_1_8TeV_pow1");
+
+
+    // Fit the functions to the data to set the "prefit" state (note this can and should be redone with combine when doing 
+    // bias studies as one typically throws toys from the "best-fit"
+    RooDataSet *data = (RooDataSet*)w_hgg->data("roohist_data_mass_cat1_toy1_cutrange__CMS_hgg_mass");
+    RooFitResult *r1 = pdf_exp->fitTo(*data,RooFit::Save(1));  // index 0
+    RooFitResult *r2 = pdf_pol->fitTo(*data,RooFit::Save(1));   // index 2
+    RooFitResult *r3 = pdf_pow->fitTo(*data,RooFit::Save(1)); // index 1 
+
+    // Make a plot (data is a toy dataset)
+    TCanvas *c1 = new TCanvas("c1","c1",800,800);
+    c1->cd();
+    RooPlot *plot = mass->frame();   data->plotOn(plot,RooFit::Name("data"));
+    pdf_exp->plotOn(plot,RooFit::LineColor(kRed),RooFit::Name("exp"));
+    pdf_pol->plotOn(plot,RooFit::LineColor(kOrange),RooFit::Name("pol"));
+    pdf_pow->plotOn(plot,RooFit::LineColor(kGreen),RooFit::Name("pow"));
+    plot->SetTitle("Background Function Fits");
+    plot->Draw();
+    c1->SaveAs("Bias_fits.pdf");
+
+    std::cout<<"chi2 nbins: "<<mass->getBins()<<std::endl;
+    std::cout<<"chi2 exp: "<<plot->chiSquare("exp","data",r1->floatParsFinal().getSize())*(mass->getBins()-r1->floatParsFinal().getSize())<<" (params="<<r1->floatParsFinal().getSize()<<")"<<endl;
+    std::cout<<"chi2 pol: "<<plot->chiSquare("pol","data",r2->floatParsFinal().getSize())*(mass->getBins()-r2->floatParsFinal().getSize())<<" (params="<<r2->floatParsFinal().getSize()<<")"<<endl;
+    std::cout<<"chi2 pow: "<<plot->chiSquare("pow","data",r3->floatParsFinal().getSize())*(mass->getBins()-r3->floatParsFinal().getSize())<<" (params="<<r3->floatParsFinal().getSize()<<")"<<endl;
+
+    // Make a RooCategory object. This will control which of the pdfs is "active"
+    RooCategory cat("pdf_index","Index of Pdf which is active");
+
+    // Make a RooMultiPdf object. The order of the pdfs will be the order of their index, ie for below 
+    // 0 == exponential
+    // 1 == linear function
+    // 2 == powerlaw
+    RooArgList mypdfs;
+    mypdfs.add(*pdf_exp);
+    mypdfs.add(*pdf_pol);
+    mypdfs.add(*pdf_pow);
+   
+    RooMultiPdf multipdf("roomultipdf","All Pdfs",cat,mypdfs);
+   
+    // As usual make an extended term for the background with _norm for freely floating yield
+    RooRealVar norm("roomultipdf_norm","Number of background events",0,10000);
+   
+    // Save to a new workspace
+    TFile *fout = new TFile("background_pdfs.root","RECREATE");
+    RooWorkspace wout("backgrounds","backgrounds");
+    wout.import(cat);
+    wout.import(norm);
+    wout.import(multipdf);
+    wout.Print();
+    wout.Write();
+
+}
