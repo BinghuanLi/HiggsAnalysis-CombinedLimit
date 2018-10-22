@@ -1,0 +1,150 @@
+DEBUG 2018-10-19 13:57:38,487: 	 Executing command: 'submit'
+DEBUG 2018-10-19 13:57:38,528: 	 Found CRAB cache file /uscms/home/dsperka/.crab3
+DEBUG 2018-10-19 13:57:38,541: 	 Checking credentials
+DEBUG 2018-10-19 13:57:38,541: 	 Proxy file /tmp/x509up_u16813 not found
+DEBUG 2018-10-19 13:57:38,541: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2018-10-19 13:57:43,806: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2018-10-19 13:57:43,872: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -timeleft
+ output : 86400
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 13:57:43,931: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -actimeleft
+ output : 86400
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 13:57:43,990: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u16813 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 13:57:43,991: 	 Proxy created.
+DEBUG 2018-10-19 13:57:43,992: 	 Will use CRAB PrivateMC plugin (i.e. will run a MC generation job type).
+DEBUG 2018-10-19 13:57:44,046: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 13:57:44,047: 	 Checking credentials
+DEBUG 2018-10-19 13:57:44,047: 	 Found proxy file /tmp/x509up_u16813
+DEBUG 2018-10-19 13:57:44,047: 	 Getting proxy life time left
+DEBUG 2018-10-19 13:57:44,103: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -timeleft
+ output : 86399
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 13:57:44,160: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -actimeleft
+ output : 86399
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 13:57:44,160: 	 Proxy valid for 23:59:59 hours
+DEBUG 2018-10-19 13:57:44,217: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u16813 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 13:57:45,388: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2018-10-19 13:57:45,434: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 13:57:45,434: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-10-19 13:57:45,434: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka_cmsweb.cern.ch for credential name
+DEBUG 2018-10-19 13:57:46,630: 	 Executing : 
+ command : myproxy-info -l a90adb9d478984ec2f7b39b4708f88008ef762ef -s myproxy.cern.ch
+ output : username: a90adb9d478984ec2f7b39b4708f88008ef762ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 644:29:58  (26.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 13:57:46,632: 	 Myproxy is valid: 2320198
+DEBUG 2018-10-19 13:57:46,632: 	 Command use: submit
+DEBUG 2018-10-19 13:57:46,632: 	 Options use: ['--config', <WMCore.Configuration.Configuration object at 0x7f9d3d5fe810>]
+DEBUG 2018-10-19 13:57:47,729: 	 CRABClient version: 3.3.1809
+DEBUG 2018-10-19 13:57:47,729: 	 Instance is prod
+DEBUG 2018-10-19 13:57:47,729: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-10-19 13:57:47,729: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-10-19 13:57:47,729: 	 Started submission
+DEBUG 2018-10-19 13:57:47,729: 	 Working on /uscms_data/d2/dsperka/CMSSW_8_1_0/src/HiggsAnalysis/CombinedLimit/combine_tutorials_2018/htt_slim/crab_full_cls_v2
+DEBUG 2018-10-19 13:57:49,996: 	 Loading required information from the environment
+DEBUG 2018-10-19 13:57:49,996: 	 Found CMSSW_8_1_0 for slc6_amd64_gcc530 with base /uscms_data/d2/dsperka/CMSSW_8_1_0
+DEBUG 2018-10-19 13:57:50,018: 	 UNIQUE NAME: tarUUID d4641788-54bc-4088-a84a-88ffdf9a2514 
+DEBUG 2018-10-19 13:57:50,019: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.requestName = 'full_cls_v2'
+config.section_('JobType')
+config.JobType.psetName = '/uscms_data/d2/dsperka/CMSSW_8_1_0/src/CombineHarvester/CombineTools/scripts/do_nothing_cfg.py'
+config.JobType.pluginName = 'PrivateMC'
+config.JobType.inputFiles = ['/uscms_data/d2/dsperka/CMSSW_8_1_0/src/CombineHarvester/CombineTools/scripts/FrameworkJobReport.xml', '/uscms_data/d2/dsperka/CMSSW_8_1_0/src/CombineHarvester/CombineTools/scripts/copyRemoteWorkspace.sh', '/uscms_data/d2/dsperka/CMSSW_8_1_0/bin/slc6_amd64_gcc530/combine', 'comb_2017_htt_slim.root']
+config.JobType.outputFiles = ['combine_output.tar']
+config.JobType.scriptExe = 'crab_full_cls_v2.sh'
+config.section_('Data')
+config.Data.outputDatasetTag = 'full_cls_v2'
+config.Data.publication = False
+config.Data.unitsPerJob = 1
+config.Data.splitting = 'EventBased'
+config.Data.outLFNDirBase = '/store/user/dsperka/Combine_Tutorial_2018/'
+config.Data.outputPrimaryDataset = 'Combine'
+config.Data.totalUnits = 220
+config.section_('User')
+config.section_('Site')
+config.Site.blacklist = ['T3_IT_Bologna', 'T3_US_UMiss']
+config.Site.storageSite = 'T3_US_FNALLPC'
+
+DEBUG 2018-10-19 13:57:50,019: 	 self.config.JobType.psetName: /uscms_data/d2/dsperka/CMSSW_8_1_0/src/CombineHarvester/CombineTools/scripts/do_nothing_cfg.py
+INFO 2018-10-19 13:57:50,043: 	 Importing CMSSW configuration /uscms_data/d2/dsperka/CMSSW_8_1_0/src/CombineHarvester/CombineTools/scripts/do_nothing_cfg.py
+INFO 2018-10-19 13:57:51,051: 	 Finished importing CMSSW configuration /uscms_data/d2/dsperka/CMSSW_8_1_0/src/CombineHarvester/CombineTools/scripts/do_nothing_cfg.py
+DEBUG 2018-10-19 13:57:51,051: 	 Writing CMSSW configuration to /uscms_data/d2/dsperka/CMSSW_8_1_0/src/HiggsAnalysis/CombinedLimit/combine_tutorials_2018/htt_slim/crab_full_cls_v2/inputs/PSet.py
+DEBUG 2018-10-19 13:57:51,059: 	 The following EDM output files will be collected: []
+DEBUG 2018-10-19 13:57:51,059: 	 The following TFile output files will be collected: []
+DEBUG 2018-10-19 13:57:51,059: 	 The following user output files will be collected: ['combine_output.tar']
+DEBUG 2018-10-19 13:57:51,059: 	 Loading required information from the environment
+DEBUG 2018-10-19 13:57:51,059: 	 Found CMSSW_8_1_0 for slc6_amd64_gcc530 with base /uscms_data/d2/dsperka/CMSSW_8_1_0
+DEBUG 2018-10-19 13:57:51,059: 	 Making tarball in /uscms_data/d2/dsperka/CMSSW_8_1_0/src/HiggsAnalysis/CombinedLimit/combine_tutorials_2018/htt_slim/crab_full_cls_v2/inputs/d4641788-54bc-4088-a84a-88ffdf9a2514default.tgz
+DEBUG 2018-10-19 13:57:51,148: 	 Checking directory /uscms_data/d2/dsperka/CMSSW_8_1_0/lib
+DEBUG 2018-10-19 13:57:51,148: 	 Adding directory /uscms_data/d2/dsperka/CMSSW_8_1_0/lib to tarball
+DEBUG 2018-10-19 13:57:53,079: 	 Checking directory /uscms_data/d2/dsperka/CMSSW_8_1_0/biglib
+DEBUG 2018-10-19 13:57:53,079: 	 Adding directory /uscms_data/d2/dsperka/CMSSW_8_1_0/biglib to tarball
+DEBUG 2018-10-19 13:57:53,082: 	 Checking directory /uscms_data/d2/dsperka/CMSSW_8_1_0/module
+DEBUG 2018-10-19 13:57:53,305: 	 Adding data directory /uscms_data/d2/dsperka/CMSSW_8_1_0/src/HiggsAnalysis/CombinedLimit/data to tarball
+DEBUG 2018-10-19 13:57:55,889: 	 Adding data directory /uscms_data/d2/dsperka/CMSSW_8_1_0/src/HiggsAnalysis/CombinedLimit/interface to tarball
+DEBUG 2018-10-19 13:57:57,250: 	 Adding data directory /uscms_data/d2/dsperka/CMSSW_8_1_0/src/CombineHarvester/CombineTools/interface to tarball
+DEBUG 2018-10-19 13:57:57,474: 	 Adding file /uscms_data/d2/dsperka/CMSSW_8_1_0/src/CombineHarvester/CombineTools/scripts/FrameworkJobReport.xml to tarball
+DEBUG 2018-10-19 13:57:57,481: 	 Adding file /uscms_data/d2/dsperka/CMSSW_8_1_0/src/CombineHarvester/CombineTools/scripts/copyRemoteWorkspace.sh to tarball
+DEBUG 2018-10-19 13:57:57,495: 	 Adding file /uscms_data/d2/dsperka/CMSSW_8_1_0/bin/slc6_amd64_gcc530/combine to tarball
+DEBUG 2018-10-19 13:57:57,555: 	 Adding file comb_2017_htt_slim.root to tarball
+DEBUG 2018-10-19 13:57:57,712: 	 Uploading archive /uscms_data/d2/dsperka/CMSSW_8_1_0/src/HiggsAnalysis/CombinedLimit/combine_tutorials_2018/htt_slim/crab_full_cls_v2/inputs/d4641788-54bc-4088-a84a-88ffdf9a2514default.tgz (7.620117.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-10-19 13:58:04,187: 	 Loading required information from the environment
+DEBUG 2018-10-19 13:58:04,188: 	 Found CMSSW_8_1_0 for slc6_amd64_gcc530 with base /uscms_data/d2/dsperka/CMSSW_8_1_0
+DEBUG 2018-10-19 13:58:04,188: 	 Making tarball in /uscms_data/d2/dsperka/CMSSW_8_1_0/src/HiggsAnalysis/CombinedLimit/combine_tutorials_2018/htt_slim/crab_full_cls_v2/inputs/debugFiles.tgz
+DEBUG 2018-10-19 13:58:04,209: 	 Uploading archive /uscms_data/d2/dsperka/CMSSW_8_1_0/src/HiggsAnalysis/CombinedLimit/combine_tutorials_2018/htt_slim/crab_full_cls_v2/inputs/debugFiles.tgz (2 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-10-19 13:58:05,543: 	 Result uploading input files: 5eea436fa4ca0589533ccd3e3aa36e48e6bf3c27ace1eb44decdde877641960c.tar.gz 
+INFO 2018-10-19 13:58:05,543: 	 Sending the request to the server
+DEBUG 2018-10-19 13:58:05,543: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'lfn': '/store/user/dsperka/Combine_Tutorial_2018/', 'savelogsflag': 0, 'useparent': 0, 'scriptexe': 'crab_full_cls_v2.sh', 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 1, 'cachefilename': '5eea436fa4ca0589533ccd3e3aa36e48e6bf3c27ace1eb44decdde877641960c.tar.gz', 'numcores': 1, 'addoutputfiles': ['combine_output.tar'], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_8_1_0', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': 'Combine', 'inputdata': '', 'ignorelocality': 0, 'dryrun': 0, 'workflow': 'crab_full_cls_v2', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'debugfilename': '5dd4a0543bdcd225d7a7604f0b15369bc7dc5fb8ae3e23810579e97a4531f63d.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc530', 'totalunits': 220, 'splitalgo': 'EventBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'PrivateMC', 'siteblacklist': ['T3_IT_Bologna', 'T3_US_UMiss'], 'publishname2': 'full_cls_v2'} 
+DEBUG 2018-10-19 13:58:05,544: 	 Encoded submit request: maxjobruntime=1250&lfn=%2Fstore%2Fuser%2Fdsperka%2FCombine_Tutorial_2018%2F&savelogsflag=0&useparent=0&scriptexe=crab_full_cls_v2.sh&asyncdest=T3_US_FNALLPC&algoargs=1&cachefilename=5eea436fa4ca0589533ccd3e3aa36e48e6bf3c27ace1eb44decdde877641960c.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_8_1_0&primarydataset=Combine&inputdata=&ignorelocality=0&dryrun=0&workflow=crab_full_cls_v2&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=5dd4a0543bdcd225d7a7604f0b15369bc7dc5fb8ae3e23810579e97a4531f63d.tar.gz&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc530&totalunits=220&splitalgo=EventBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=PrivateMC&publishname2=full_cls_v2&addoutputfiles=combine_output.tar&siteblacklist=T3_IT_Bologna&siteblacklist=T3_US_UMiss
+DEBUG 2018-10-19 13:58:06,960: 	 Result: {u'result': [{u'RequestName': u'181019_185806:dsperka_crab_full_cls_v2'}]}
+INFO 2018-10-19 13:58:06,963: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2018-10-19 13:58:06,964: 	 Task name: 181019_185806:dsperka_crab_full_cls_v2
+INFO 2018-10-19 13:58:06,964: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2018-10-19 13:58:06,964: 	 About to return

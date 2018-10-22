@@ -1,0 +1,111 @@
+DEBUG 2018-10-16 10:40:03,368: 	 Executing command: 'checkwrite'
+DEBUG 2018-10-16 10:40:03,369: 	 Could not find CRAB cache file /uscms/home/dsperka/.crab3; creating a new one.
+DEBUG 2018-10-16 10:40:03,381: 	 Checking credentials
+DEBUG 2018-10-16 10:40:03,381: 	 Found proxy file /tmp/x509up_u16813
+DEBUG 2018-10-16 10:40:03,381: 	 Getting proxy life time left
+DEBUG 2018-10-16 10:40:03,484: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -timeleft
+ output : 43092
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-16 10:40:03,588: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -actimeleft
+ output : 43091
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-16 10:40:03,588: 	 Proxy valid for 11:58:12 hours
+DEBUG 2018-10-16 10:40:03,696: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-16 10:40:03,697: 	 Checking credentials
+DEBUG 2018-10-16 10:40:03,697: 	 Found proxy file /tmp/x509up_u16813
+DEBUG 2018-10-16 10:40:03,697: 	 Getting proxy life time left
+DEBUG 2018-10-16 10:40:03,800: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -timeleft
+ output : 43092
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-16 10:40:03,903: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -actimeleft
+ output : 43091
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-16 10:40:03,904: 	 Proxy valid for 11:58:12 hours
+DEBUG 2018-10-16 10:40:04,007: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u16813 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-16 10:40:04,007: 	 Command use: checkwrite
+DEBUG 2018-10-16 10:40:04,007: 	 Options use: ['--site=T3_US_FNALLPC']
+DEBUG 2018-10-16 10:40:04,007: 	 Instance is None
+DEBUG 2018-10-16 10:40:04,007: 	 Server base url is None
+DEBUG 2018-10-16 10:40:04,012: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u16813', 'maxcachereuse': 24.0, 'cachepath': '/tmp/.wmcore_cache_BFiwoo/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u16813', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'content_type': 'application/x-www-form-urlencoded', 'cacheduration': 0, 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'accept_type': 'text/html', 'key': '/tmp/x509up_u16813', 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory object at 0x7fd0aaa48ed0>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'pycurl': True, 'cachepath': '/tmp/.wmcore_cache_BFiwoo/cmsweb.cern.ch', 'cert': '/tmp/x509up_u16813', 'timeout': 300, 'req_cache_path': '/tmp/.wmcore_cache_BFiwoo/cmsweb.cern.ch/.cache', 'logger': <logging.Logger object at 0x7fd0aaa48310>}, 'logger': <logging.Logger object at 0x7fd0aaa48310>, 'cacheduration': 0, 'method': None, 'pycurl': True}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/.wmcore_cache_BFiwoo/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2018-10-16 10:40:04,012: 	 Will check write permission in the default location /store/user/<username>
+INFO 2018-10-16 10:40:04,012: 	 Retrieving DN from proxy...
+INFO 2018-10-16 10:40:04,490: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+INFO 2018-10-16 10:40:04,491: 	 Retrieving username from SiteDB...
+INFO 2018-10-16 10:40:06,356: 	 Username is: dsperka
+INFO 2018-10-16 10:40:06,356: 	 Validating LFN /store/user/dsperka...
+INFO 2018-10-16 10:40:06,357: 	 LFN /store/user/dsperka is valid.
+INFO 2018-10-16 10:40:06,380: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2018-10-16 10:40:06,380: 	 Will check write permission in /store/user/dsperka on site T3_US_FNALLPC
+DEBUG 2018-10-16 10:40:06,383: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T3_US_FNALLPC'], 'custodial': 'n', 'lfn': ['/store/user/dsperka/crab3checkwrite_20181016_104006/crab3checkwrite_20181016_104006.tmp'], 'protocol': 'srmv2'}
+INFO 2018-10-16 10:40:07,537: 	 
+Attempting to create (dummy) directory crab3checkwrite_20181016_104006 and copy (dummy) file crab3checkwrite_20181016_104006.tmp to /store/user/dsperka
+
+INFO 2018-10-16 10:40:07,541: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///uscms_data/d2/dsperka/CMSSW_8_1_0/src/HiggsAnalysis/CombinedLimit/combine_tutorials_2018/htt_slim/crab3checkwrite_20181016_104006.tmp 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/dsperka/crab3checkwrite_20181016_104006/crab3checkwrite_20181016_104006.tmp'
+INFO 2018-10-16 10:40:07,541: 	 Please wait...
+INFO 2018-10-16 10:40:09,639: 	 
+Successfully created directory crab3checkwrite_20181016_104006 and copied file crab3checkwrite_20181016_104006.tmp to /store/user/dsperka
+INFO 2018-10-16 10:40:09,640: 	 
+Attempting to delete file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/dsperka/crab3checkwrite_20181016_104006/crab3checkwrite_20181016_104006.tmp
+
+INFO 2018-10-16 10:40:09,640: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -v -t 180 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/dsperka/crab3checkwrite_20181016_104006/crab3checkwrite_20181016_104006.tmp'
+INFO 2018-10-16 10:40:09,640: 	 Please wait...
+INFO 2018-10-16 10:40:10,324: 	 
+Successfully deleted file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/dsperka/crab3checkwrite_20181016_104006/crab3checkwrite_20181016_104006.tmp
+INFO 2018-10-16 10:40:10,325: 	 
+Attempting to delete directory srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/dsperka/crab3checkwrite_20181016_104006/
+
+INFO 2018-10-16 10:40:10,325: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -r -v -t 180 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/dsperka/crab3checkwrite_20181016_104006/'
+INFO 2018-10-16 10:40:10,325: 	 Please wait...
+INFO 2018-10-16 10:40:11,286: 	 
+Successfully deleted directory srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/dsperka/crab3checkwrite_20181016_104006/
+INFO 2018-10-16 10:40:11,288: 	 
+Checkwrite Result:
+INFO 2018-10-16 10:40:11,288: 	 Success: Able to write in /store/user/dsperka on site T3_US_FNALLPC
+DEBUG 2018-10-16 16:21:16,796: 	 Executing command: 'getoutput'
+DEBUG 2018-10-16 16:21:16,797: 	 Found CRAB cache file /uscms/home/dsperka/.crab3
+DEBUG 2018-10-19 15:07:21,880: 	 Executing command: 'submit'
+DEBUG 2018-10-19 15:07:21,889: 	 Found CRAB cache file /uscms/home/dsperka/.crab3
+DEBUG 2018-10-19 15:07:21,906: 	 Checking credentials
+DEBUG 2018-10-19 15:07:21,906: 	 Found proxy file /tmp/x509up_u16813
+DEBUG 2018-10-19 15:07:21,906: 	 Getting proxy life time left
+DEBUG 2018-10-19 15:07:21,964: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -timeleft
+ output : 82222
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 15:07:22,020: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u16813 -actimeleft
+ output : 82221
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-19 15:07:22,020: 	 Proxy valid for 22:50:22 hours
+DEBUG 2018-10-19 15:07:22,021: 	 Will use CRAB PrivateMC plugin (i.e. will run a MC generation job type).

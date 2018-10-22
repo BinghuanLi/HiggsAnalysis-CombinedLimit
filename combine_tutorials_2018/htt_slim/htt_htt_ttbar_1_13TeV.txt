@@ -1,0 +1,23 @@
+# Datacard produced by CombineHarvester with git status: 4adba2b-dirty
+imax    1 number of bins
+jmax    6 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * htt_ttbar_1_13TeV htt_htt_ttbar_1_13TeV.input.root htt_ttbar_1_13TeV/$PROCESS htt_ttbar_1_13TeV/$PROCESS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          htt_ttbar_1_13TeV 
+observation  94462.0         
+--------------------------------------------------------------------------------
+bin                              htt_ttbar_1_13TeV htt_ttbar_1_13TeV htt_ttbar_1_13TeV htt_ttbar_1_13TeV htt_ttbar_1_13TeV htt_ttbar_1_13TeV htt_ttbar_1_13TeV 
+process                          ZL              W               TT              EWKZ            VV              QCD             ZTT             
+process                          1               2               3               4               5               6               7               
+rate                             54.0552         768.568         84243.7         1.6654          12258.9         709.001         62.495          
+--------------------------------------------------------------------------------
+CMS_eff_trigger_em_13TeV lnN     1.02            1.02            1.02            1.02            1.02            -               1.02            
+CMS_htt_eff_e            lnN     1.02            1.02            1.02            1.02            1.02            -               1.02            
+CMS_htt_eff_m            lnN     1.02            1.02            1.02            1.02            1.02            -               1.02            
+CMS_htt_scale_met_13TeV  lnN     1.01            1.01            1.01            1.01            1.01            -               1.01            
+CMS_htt_vvXsec_13TeV     lnN     -               -               -               -               1.05            -               -               
+lumi_13TeV_2016          lnN     -               1.025           -               -               1.025           -               -               
+rate_ttbar               rateParam  *          TT         1 [0.8,1.2]
+htt_ttbar_1_13TeV autoMCStats 0 0 1

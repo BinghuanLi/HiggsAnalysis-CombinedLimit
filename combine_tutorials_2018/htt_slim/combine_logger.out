@@ -1,0 +1,19 @@
+INFO: (function: improveOnce) CascadeMinimizer.cc: 157 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=1, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 180 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 185 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 157 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=1, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 180 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 185 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 157 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=1, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 180 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 185 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 157 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=1, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 180 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 185 -- Minimization success! status=0
+ERROR: (function: runSpecific) [WARNING]: Unable to determine uncertainties on all fit parameters in b-only fit. Have a look at https://cms-hcomb.gitbooks.io/combine/content/part3/nonstandard.html#fit-parameter-uncertainties for more information.
+INFO: (function: improveOnce) CascadeMinimizer.cc: 157 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=1, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 180 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 185 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 157 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=1, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 180 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 185 -- Minimization success! status=0

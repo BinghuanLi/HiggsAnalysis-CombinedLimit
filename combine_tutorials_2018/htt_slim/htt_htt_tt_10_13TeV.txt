@@ -1,0 +1,57 @@
+# Datacard produced by CombineHarvester with git status: 4adba2b-dirty
+imax    1 number of bins
+jmax    9 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * htt_tt_10_13TeV htt_htt_tt_10_13TeV.input.root htt_tt_10_13TeV/$PROCESS htt_tt_10_13TeV/$PROCESS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          htt_tt_10_13TeV 
+observation  66307.0         
+--------------------------------------------------------------------------------
+bin                                           htt_tt_10_13TeV htt_tt_10_13TeV htt_tt_10_13TeV htt_tt_10_13TeV htt_tt_10_13TeV htt_tt_10_13TeV htt_tt_10_13TeV htt_tt_10_13TeV htt_tt_10_13TeV htt_tt_10_13TeV 
+process                                       ZL              ZJ              VVT             TTT             TTJ             EWKZ            VVJ             W               QCD             ZTT             
+process                                       1               2               3               4               5               6               7               8               9               10              
+rate                                          97.7884         172.547         13.1084         8.44012         5.74847         0.940043        14.0234         1338.79         63456.5         1172.53         
+--------------------------------------------------------------------------------
+CMS_eff_t_13TeV                       lnN     -               1.06            1.09            1.09            1.06            1.09            1.06            1.06            -               1.09            
+CMS_eff_t_tt_13TeV                    lnN     -               1.02            1.04            1.04            1.02            1.04            1.02            1.02            -               1.04            
+CMS_eff_trigger_tt_13TeV              lnN     1.1             1.1             1.1             1.1             1.1             1.1             1.1             1.1             -               1.1             
+CMS_htt_dyShape_13TeV                 lnN     0.999/1.001     0.989/1.011     -               -               -               -               -               -               -               0.993/1.007     
+CMS_htt_jetToTauFake_13TeV            lnN     -               1.123/0.877     -               -               1.111/0.889     -               1.11/0.89       -               -               -               
+CMS_htt_ttbarShape_13TeV              lnN     -               -               -               1.091/0.922     0.976/1.029     -               -               -               -               -               
+CMS_htt_vvXsec_13TeV                  lnN     -               -               1.05            -               -               -               1.05            -               -               -               
+CMS_htt_wjXsec_13TeV                  lnN     -               -               -               -               -               -               -               1.04            -               -               
+CMS_htt_zmm_norm_extrap_0jet_tt_13TeV lnN     1.07            1.07            -               -               -               1.07            -               -               -               1.07            
+CMS_scale_j_AbsoluteFlavMap_13TeV     lnN     1/1             1/1             1/1             1/1             1/1             1/1             1/1             1/1             -               1/1             
+CMS_scale_j_AbsoluteMPFBias_13TeV     lnN     1/1             1.003/0.996     1.002/1         1/1             1.079/0.923     1/1             1.006/0.992     1.008/0.999     -               1/0.998         
+CMS_scale_j_AbsoluteScale_13TeV       lnN     1/1             1.003/0.996     1.007/1         1/1             1.079/0.923     1/1             1.006/0.992     1.008/1         -               1/0.998         
+CMS_scale_j_AbsoluteStat_13TeV        lnN     1/1             1.003/1         1.007/1         1/1             1.079/0.923     1/1             1.006/0.992     1.008/1         -               1/1             
+CMS_scale_j_FlavorQCD_13TeV           lnN     1/0.977         1.024/0.976     1.036/0.985     1/0.956         1.079/0.75      1/1             1.04/0.972      1.021/0.997     -               1.013/0.991     
+CMS_scale_j_Fragmentation_13TeV       lnN     1/1             1.003/0.996     1.002/1         1/1             1.079/0.923     1/1             1.006/0.992     1.008/0.999     -               1/0.998         
+CMS_scale_j_PileUpDataMC_13TeV        lnN     1/1             1.006/0.995     1.009/0.999     1/1             1/0.923         1/1             1.035/0.987     1.012/0.998     -               1.003/0.997     
+CMS_scale_j_PileUpPtBB_13TeV          lnN     1/1             1/0.996         1.002/1         1/1             1/1             1/1             1/1             1.001/1         -               1.001/0.999     
+CMS_scale_j_PileUpPtEC1_13TeV         lnN     1/1             1.01/0.996      0.995/1         1/1             1.079/1         1/0.846         1.015/0.998     1/0.999         -               1.004/0.997     
+CMS_scale_j_PileUpPtEC2_13TeV         lnN     1/1             1/0.997         1/0.994         1/1             1/1             1/1             1.023/0.999     1.005/1         -               1.003/0.997     
+CMS_scale_j_PileUpPtHF_13TeV          lnN     1/1             1.003/0.999     1.007/0.999     1/1             1/0.923         1/1             1.001/0.988     1.011/0.998     -               1.002/0.998     
+CMS_scale_j_PileUpPtRef_13TeV         lnN     1/1             1.003/0.996     1.002/1         1/1             1.079/0.923     1/1             1.019/0.992     1.008/0.999     -               1/0.998         
+CMS_scale_j_RelativeBal_13TeV         lnN     0.982/1         0.998/0.999     0.993/1.006     1/1             0.929/1         1/1.189         1.001/1.034     0.992/1.023     -               0.988/1.008     
+CMS_scale_j_RelativeFSR_13TeV         lnN     1/1             0.995/1.006     0.999/1.007     1/1             0.923/1.079     1/1             0.987/1.007     0.999/1.009     -               0.999/1         
+CMS_scale_j_RelativeJEREC1_13TeV      lnN     1/1             1.003/1         1/1             1/1             1/1             1/1             1/1             1/1             -               1/1             
+CMS_scale_j_RelativeJEREC2_13TeV      lnN     1/1             1/1             1/1             1/1             1/1             1/1             1.006/1         1.001/1         -               1/1             
+CMS_scale_j_RelativeJERHF_13TeV       lnN     1/1             1/1             1/1             1/1             1/1             1/1             1/1             1/1             -               1/1             
+CMS_scale_j_RelativePtBB_13TeV        lnN     1/1             1/0.996         1.001/1.001     1/1             1/1             1/1             1/1             1.001/1         -               1/1             
+CMS_scale_j_RelativePtEC1_13TeV       lnN     1/1             1.006/1         0.995/1         1/1             1.079/1         1/1             1.013/0.998     1.002/1         -               1.002/0.999     
+CMS_scale_j_RelativePtEC2_13TeV       lnN     1.002/1         1/0.997         1/0.994         1/1             1/1             1/1             1.023/0.999     1.005/1         -               1.004/0.993     
+CMS_scale_j_RelativePtHF_13TeV        lnN     1/0.982         1.003/0.999     1.008/0.996     1/1             1/0.85          1.189/1         1.007/0.988     1.019/0.994     -               1.008/0.993     
+CMS_scale_j_RelativeStatEC_13TeV      lnN     1/1             1.003/1         0.995/1         1/1             1.079/1         1/1             1.021/0.998     1.001/1         -               1/0.998         
+CMS_scale_j_RelativeStatFSR_13TeV     lnN     1/1             1.003/1         1/1             1/1             1/0.923         1/1             1.006/0.994     1.007/1         -               1/1             
+CMS_scale_j_RelativeStatHF_13TeV      lnN     1/1             1/0.999         1.007/1         1/1             1/0.923         1/1             1.001/0.988     1.011/0.999     -               1.001/1         
+CMS_scale_j_SinglePionECAL_13TeV      lnN     1/1             0.996/1.003     1/1.002         1/1             0.923/1.079     1/1             0.992/1.013     0.999/1.008     -               0.998/1         
+CMS_scale_j_SinglePionHCAL_13TeV      lnN     1/1             0.996/1.003     1/1.002         1/1             0.923/1.079     1/1             0.992/1.006     0.999/1.008     -               0.998/1         
+CMS_scale_j_TimePtEta_13TeV           lnN     1/1             1/1.003         1.001/1         1/1             1/1.079         1/1             0.998/1.021     1/1.001         -               0.998/1         
+CMS_scale_t_1prong1pizero_13TeV       lnN     1/1             1/1             0.979/1.027     0.954/1         1/1             1/1             0.972/1.006     0.998/1.011     -               0.959/1.031     
+CMS_scale_t_1prong_13TeV              lnN     1/1             0.996/1.003     0.993/1.004     1/1             1/1             1/1             1.011/1.012     0.996/1.02      -               0.985/1.024     
+CMS_scale_t_3prong_13TeV              lnN     1/1             1/1             0.989/1.013     1/1             1/1             1/1             0.994/1.052     0.993/0.996     -               0.992/1.007     
+lumi_13TeV_2016                       lnN     -               -               1.025           -               -               -               1.025           1.025           -               -               
+rate_QCD_cr_0jet_tt                   rateParam  *          QCD        1 [0,5]
+htt_tt_10_13TeV autoMCStats 0 0 1
