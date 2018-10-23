@@ -1,0 +1,24 @@
+name                                              b-only fit            s+b fit         rho
+CMS_hgg_BR                                       +0.01, 1.00        -0.00, 0.99       -0.32
+CMS_hgg_LooseMvaSF                               +0.00, 0.99        -0.00, 0.99       -0.03
+CMS_hgg_PreselSF                                 +0.01, 0.99        -0.00, 1.01       -0.29
+CMS_hgg_SigmaEOverEShift                         -0.02, 0.95     ! -0.00, 0.44!       +0.27
+CMS_hgg_TriggerWeight                            +0.00, 0.99        -0.00, 0.99       -0.01
+CMS_hgg_electronVetoSF                           +0.00, 0.99        -0.00, 1.00       -0.02
+CMS_hgg_nuisance_Absolute_13TeVscale             +0.00, 0.99        +0.00, 1.00       -0.01
+CMS_hgg_nuisance_Geant4_13TeVscale               +0.00, 0.99        +0.00, 1.00       -0.00
+CMS_hgg_nuisance_HighR9EB_13TeVscale             +0.00, 0.99        +0.00, 0.99       +0.00
+CMS_hgg_nuisance_HighR9EB_13TeVsmear             +0.00, 0.99        +0.00, 0.99       +0.00
+CMS_hgg_nuisance_HighR9EE_13TeVscale             +0.00, 0.99        +0.00, 0.99       +0.00
+CMS_hgg_nuisance_HighR9EE_13TeVsmear             +0.00, 0.99        +0.00, 0.99       +0.00
+CMS_hgg_nuisance_LightColl_13TeVscale            +0.00, 0.99        +0.00, 0.99       +0.00
+CMS_hgg_nuisance_LowR9EB_13TeVscale              +0.00, 0.99        +0.00, 0.99       +0.00
+CMS_hgg_nuisance_LowR9EB_13TeVsmear              +0.00, 0.99        +0.00, 0.99       +0.00
+CMS_hgg_nuisance_LowR9EE_13TeVscale              +0.00, 0.99        +0.00, 0.99       +0.00
+CMS_hgg_nuisance_LowR9EE_13TeVsmear              +0.00, 0.99        +0.00, 0.99       +0.00
+CMS_hgg_nuisance_MaterialCentral_scale           -0.00, 0.99        -0.00, 1.01       -0.00
+CMS_hgg_nuisance_MaterialForward_scale           -0.00, 0.99        +0.00, 0.99       -0.01
+CMS_hgg_nuisance_NonLinearity_13TeVscale         +0.00, 0.99        +0.00, 1.01       -0.01
+CMS_hgg_nuisance_deltafracright                  +0.00, 0.93        +0.00, 0.99       -0.02
+CMS_hgg_phoIdMva                                 -0.05, 1.03        +0.00, 0.98       +0.29
+lumi_13TeV                                       +0.01, 0.99        -0.00, 1.02       -0.22
