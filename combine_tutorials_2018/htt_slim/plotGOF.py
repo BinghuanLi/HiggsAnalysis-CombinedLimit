@@ -1,6 +1,6 @@
 import ROOT
 
-f = ROOT.TFile('merged_higgsCombinehtt_TestToys.GoodnessOfFit.mH125.09.root')
+f = ROOT.TFile('gof_saturated_toys.root')
 t = f.Get('limit')
 c = ROOT.TCanvas()
 vals = []
@@ -13,7 +13,7 @@ hist = ROOT.gDirectory.Get('hist')
 hist.SetTitle('Test-statistic distribution')
 hist.Draw("HIST")
 
-fobs = ROOT.TFile('higgsCombinehtt_Test.GoodnessOfFit.mH125.09.root')
+fobs = ROOT.TFile('higgsCombineGOF_Saturated_htt_slim.GoodnessOfFit.mH125.09.root')
 tobs = fobs.Get('limit')
 tobs.GetEntry(0)
 obs = tobs.limit
