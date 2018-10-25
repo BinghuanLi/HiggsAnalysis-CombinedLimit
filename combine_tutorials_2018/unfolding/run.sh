@@ -1,5 +1,3 @@
-
-
 text2workspace.py -P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel  --PO verbose \
       --PO 'map=.*/InsideAcceptance_genPt_0p0to15p0:r_0p0to15p0[1,0,3]' \
       --PO 'map=.*/InsideAcceptance_genPt_15p0to30p0:r_15p0to30p0[1,0,3]' \

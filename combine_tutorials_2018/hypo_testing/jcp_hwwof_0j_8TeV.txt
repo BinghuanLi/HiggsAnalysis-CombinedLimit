@@ -1,0 +1,63 @@
+imax 1 number of channels
+jmax * number of background
+kmax * number of nuisance parameters
+Observation 5747
+shapes *   *   jcp_hwwof_0j.input_8TeV.root  histo_$PROCESS histo_$PROCESS_$SYSTEMATIC
+shapes data_obs * jcp_hwwof_0j.input_8TeV.root  histo_Data 
+bin j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev j0of8tev
+process qqbarH_ALT ggH_ALT ZH WH qqH ggH qqWW ggWW VV Top Zjets WjetsE Wgamma Wg3l Ztt WjetsM qqWW2j
+process -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11
+rate  129.869  146.427   1.728   5.833   3.033  234.884  3973.542  210.835  131.912  499.856   0.000  279.465  115.142  166.923  46.430  327.212   0.288
+lumi_8TeV                        lnN 1.026 1.026 1.026 1.026 1.026 1.026 1.000 1.000 1.026   -     -     -   1.026 1.026 1.026     - 1.026
+CMS_hww_MVALepEffBounding          shape  1.000   1.000   1.000   1.000   1.000   1.000   1.000 1.000 1.000   -     -     -   -     -     -	 -     1.000
+CMS_hww_MVALepResBounding          shape  1.000   1.000   1.000   1.000   1.000   1.000   1.000 1.000 1.000 1.000   -     -   -     -     -	 -     1.000
+CMS_hww_MVAMETResBounding          shape  1.000   1.000   1.000   1.000   1.000   1.000   1.000 1.000 1.000 1.000   -     -   -     -     -	 -     1.000
+CMS_hww_MVAJESBounding             shape   1.000   1.000   1.000   1.000   1.000   1.000   1.000 1.000 1.000 1.000   -     -   -     -     -     -   1.000
+FakeRate_e                           lnN   -     -     -	  -	-     -     -	  -	-     -     -	1.360	-     -     -	  -   	  -
+FakeRate_m                           lnN   -     -     -	  -	-     -     -	  -	-     -     -	   -	-     -     -	 1.360	  -
+CMS_hww_MVAWEBounding          shape  -     -	 -     -     -     -	 -     -     -     -	 -   1.000   -     -	 -     -   	  -
+CMS_hww_MVAWMBounding          shape  -     -	 -     -     -     -	 -     -     -     -	 -     -     -     -	 -    1.000	  -
+UEPS 	                     lnN  0.940  0.940   -	-     -   0.940   -	-     -     -	  -	-     -     -	  -	-	  -
+interf_ggH                        lnN  1.000  1.000   -	-     -   1.000   -	-     -     -	  -	-     -     -	  -	-	  -
+pdf_gg	                     lnN -  1.072   -	-     - 1.072   -     -     -     -     -     -     -     -     -     -     -
+pdf_qqbar                         lnN 1.040 -  -    -	-     -    -     -   1.040   -     -     -   1.040 1.040   -     -      -
+CMS_hww_PDFggWW                shape -  -   -	-     -	 -     -    1.0    -	 -     -     -     -	 -     -     -     -
+CMS_hww_PDFqqWW                shape -  -   -	-     -	 -    1.0    -     -	 -     -     -     -	 -     -     -     -
+QCDscale_ggH                     lnN 1.160   1.160	 -   -    -    1.160   -      -     -	  -	-     -     -	  -	-     -     -
+QCDscale_ggH1in                  lnN 0.920   0.920	 -   -    -    0.920   -      -     -	  -	-     -     -	  -	-     -     -
+QCDscale_ggH2in                  lnN 1.000   1.000	 -   -    -    1.000   -      -     -	  -	-     -     -	  -	-     -     -
+QCDscale_qqH                     lnN - -     -	-   1.010   -	  -	-     -     -	  -	-     -     -	  -	-     -
+QCDscale_VH                      lnN - -   1.020 1.020   -     -	  -	-     -     -	  -	-     -     -	  -	-    -
+QCDscale_WW2j                    lnN  -    -     -     -     -     -     -     -     -     -     -     -     -     -     -   -     -	 -     -   1.360555
+QCDscale_VV                      lnN  -    -   -   -    -  	-     -     -	1.040	-     -     -	  -	-     -     -    -
+QCDscale_Vgamma                  lnN  -    -   -   -    -  	-     -     -	  -	-     -     -	1.300	-     -     -    -
+QCDscale_ggVV                    lnN  -    -   -   -    -        -     -   1.300   -	-     -     -	  -	-     -     -    -
+QCDscale_WW_EXTRAP               lnN  -    -   -   -    -  	-   1.000   -	  -	-     -     -	  -	-     -     -    -
+QCDscale_ggH_ACCEPT              lnN  -   1.020  -   -    -  1.020   -     -	  -	-     -     -	  -	-     -     -    -
+QCDscale_qqH_ACCEPT              lnN 1.020  -       -    -   1.020   -     -     -     -     -     -     -     -     -     -     -    -
+QCDscale_VH_ACCEPT               lnN -  -    1.020 1.020   -     -     -     -     -     -     -     -     -     -     -     -    -
+CMS_hww_0j_ttbar_8TeV          lnN -  -  -   -    -  	-     -     -	  -   1.192   -     -	  -	-     -     -    -
+CMS_hwwof_0j_Z_8TeV            lnN -  -  -   -    -  	-     -     -	  -	-   1.000   -	  -	-     -     -    -
+CMS_hww_0j_WW_8TeV_SHAPE                               lnU -  -    -   -    -     -    2.0    -     -     -     -     -     -     -     -     -    -
+CMS_hww_Wg3l                     lnN - -    -   -    -     -     -      -	  -	-     -     -	  -   1.400   -     -    -
+CMS_hww_Ztt                      lnN - -    -   -    -     -     -      -	  -	-     -     -	  -	-    1.100  -    -
+CMS_hww_MVATopBounding                shape -  -  -   -    -  	-      -    -	      -    1.0    -	-	  -	-     -     -    -
+CMS_hww_MVAWWBounding                 shape -  -  -   -    -  	-     1.0    -         -     -     -	 -	   -	 -     -    -    -
+CMS_hww_MVAWWNLOBounding              shape -  -  -   -    -  	-     1.0    -         -     -     -	 -	   -	 -     -    -    -
+CMS_hwwof_0j_MVAqqbarH_ALTStatBounding_8TeV  shape   1.0  -   -   -    -    -      -  	 -	   -	 -     -	   -	     -     -	 -     -    -
+CMS_hwwof_0j_MVAggH_ALTStatBounding_8TeV  shape -  1.0     -   -    -    -      -  	 -	   -	 -     -	   -	     -     -	 -     -    -
+CMS_hwwof_0j_MVAZHStatBounding_8TeV      shape  -   -  1.000      -    -      -           -         -     -     -           -         -     -     -     -     -    -
+CMS_hwwof_0j_MVAWHStatBounding_8TeV      shape -   -       -   1.000    -      -           -         -     -     -           -         -     -     -      -    -    -
+CMS_hwwof_0j_MVAqqHStatBounding_8TeV     shape -   -     -      -   1.0     -     -         -     -     -     -         -     -     -     -     -     -
+CMS_hwwof_0j_MVAggHStatBounding_8TeV     shape -      -   -    -     -	 1.0	-     - 	-     -     -	  -	    -	  -	-     -        -
+CMS_hwwof_0j_MVAqqWWStatBounding_8TeV    shape  -     -   -    -     -	  -    1.0    - 	-     -     -	  -	    -	  -	-     -        -
+CMS_hwwof_0j_MVAggWWStatBounding_8TeV    shape  -      -   -    -    -	  -	-    1.0    -	  -	-     - 	-     -     -	  -	    -
+CMS_hwwof_0j_MVAVVStatBounding_8TeV      shape  -     -   -    -     -	  -	-     -    1.0    -	-     - 	-     -     -	  -	    -
+CMS_hwwof_0j_MVATopStatBounding_8TeV     shape  -     -   -    -     -	  -	-     - 	-    1.0    -	  -	    -	  -	-     -    -
+CMS_hwwof_0j_MVAZjetsStatBounding_8TeV   shape  -    -   -    -      -	  -	-     - 	-     -    1.0    -	    -	  -	-     -    -
+CMS_hwwof_0j_MVAWjetsEStatBounding_8TeV  shape  -   -   -    -       -	  -	-     - 	-     -     -	 1.0	-     -     -	  -	    -
+CMS_hwwof_0j_MVAWgammaStatBounding_8TeV  shape  -    -   -    -      -	  -	-     - 	-     -     -	  -    1.000    -     -	 -       -
+CMS_hwwof_0j_MVAWg3lStatBounding_8TeV     shape -     -   -    -      -     -	 -     -	 -     -     -     -	     -    1.000	 -     -       -
+CMS_hwwof_0j_MVAZttStatBounding_8TeV      shape -     -   -    -      -     -	 -     -	 -     -     -     -	     -    -	1.000     -        -
+CMS_hwwof_0j_MVAWjetsMStatBounding_8TeV   shape  -    -   -    -      -     -	 -     -	 -     -     -     -	-     -     -	  1.0	       -
+CMS_hwwof_0j_MVAqqWW2jStatBounding_8TeV   shape -     -   -    -      -     -	 -     -	 -     -     -     -	-     -     -	       -	  1.0

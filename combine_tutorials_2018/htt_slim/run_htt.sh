@@ -2,19 +2,10 @@
 
 ulimit -s unlimited
 
-#curl -s https://raw.githubusercontent.com/cms-analysis/CombineHarvester/master/CombineTools/scripts/sparse-checkout-https.sh > sparse-checkout-https.sh
-#chmod u+x sparse-checkout-https.sh
-#./sparse-checkout-https.sh
-#scram b -j 8
-#cd HiggsAnalysis/CombinedLimit/combine_tutorials_2018/htt_slim/
-#source /cvmfs/cms.cern.ch/cmsset_default.csh
-#cmsenv
-#source /cvmfs/cms.cern.ch/crab3/crab.sh
-#voms-proxy-init -voms cms
-
-# OBSERVED 
 username=$(whoami)
 echo $username
+
+# OBSERVED 
 
 if [ $1 -eq "0" ]; then
 echo "convert the datacard to a binary workspace"

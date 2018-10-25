@@ -1,0 +1,10 @@
+ <<< Combine >>> 
+>>> including systematics
+>>> using the Ratio of Profiled Likelihoods test statistics (Q_TEV)
+>>> method used is HybridNew
+>>> random number generator seed is 123456
+Computing results starting from observation (a-posteriori)
+[#0] WARNING:Eval -- RooStatsUtils::MakeNuisancePdf - no constraints found on nuisance parameters in the input model
+[#0] WARNING:Eval -- RooStatsUtils::MakeNuisancePdf - no constraints found on nuisance parameters in the input model
+/tmp/rstats-b23XIm
+/tmp/rstats-4oJmUZ

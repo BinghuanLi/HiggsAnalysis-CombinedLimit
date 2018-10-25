@@ -1,0 +1,3 @@
+INFO: (function: improveOnce) CascadeMinimizer.cc: 157 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=1, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 180 -- Minimisation finished with status=-1
+DEBUG: (function: improveOnce) CascadeMinimizer.cc: 186 -- Minimization ended with latest status != 0 or 1
